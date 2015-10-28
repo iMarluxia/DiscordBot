@@ -76,12 +76,12 @@ public class CCCDiscordBot {
 					
 					System.out.println("Got here");
 					
-					if (m.getContent().startsWith(".meme")
+					if (m.getContent().startsWith("!meme")
 							|| m.getContent().startsWith(".nicememe")) {
 							new MessageBuilder().appendContent("MEMES REQUESTED:", MessageBuilder.Styles.UNDERLINE_BOLD_ITALICS)
                                     .appendContent(" http://niceme.me/").withChannel(messageReceivedEvent.getMessage().getChannel())
                                     .build();
-					} else if (m.getContent().startsWith(".clear")) {
+					} else if (m.getContent().startsWith("!clear") && m.getAuthor().getID().equals("79429897923067904")) {
 						Channel c = DiscordClient.get().getChannelByID(m.getChannel().getID());
 						if (null != c) {
 							c.getMessages().stream().filter(message -> message.getAuthor().getID()
@@ -94,7 +94,7 @@ public class CCCDiscordBot {
 								}
 							});
 						}
-					} else if (m.getContent().startsWith(".name ")) {
+					} else if (m.getContent().startsWith("!name ") && m.getAuthor().getID().equals("79429897923067904")) {
 						String s = m.getContent().split(" ", 2)[1];
 						try {
 							DiscordClient.get().changeAccountInfo(s, "", "");
@@ -102,7 +102,7 @@ public class CCCDiscordBot {
 						} catch (ParseException | IOException e) {
 							e.printStackTrace();
 						}
-					} else if(m.getContent().startsWith(".pm")) {
+					} else if(m.getContent().startsWith("!pm")) {
                         try {
                             PrivateChannel channel = DiscordClient.get().getOrCreatePMChannel(m.getAuthor());
                             new MessageBuilder().withChannel(channel).withContent("SUP DUDE").build();
