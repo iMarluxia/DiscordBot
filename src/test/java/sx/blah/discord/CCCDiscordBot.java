@@ -329,7 +329,7 @@ public class CCCDiscordBot {
 				}
 			});
 
-			DiscordClient.get().getDispatcher().registerListener(new IListener<MessageDeleteEvent>() {
+			/*DiscordClient.get().getDispatcher().registerListener(new IListener<MessageDeleteEvent>() {
 				@Override public void receive(MessageDeleteEvent event) {
 					try {
 						event.getMessage().reply("you said, \\\"" + event.getMessage().getContent() + "\\\"");
@@ -337,7 +337,7 @@ public class CCCDiscordBot {
 						e.printStackTrace();
 					}
 				}
-			});
+			});*/
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
