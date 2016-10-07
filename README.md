@@ -1,5 +1,5 @@
-# DISCOTINUED
-Stopped developemet on this bot a while ago, didnt really have a use for it. Starting from scratch now that the API has evolved. Check out the PizzaBot repository.
+# DISCONTINUED
+Stopped development on this bot a while ago, didnt really have a use for it. Starting from scratch now that the API has evolved. Check out the PizzaBot repository.
 
 # Discord4J  
 ![](https://travis-ci.org/nerd/Discord4J.svg)  
